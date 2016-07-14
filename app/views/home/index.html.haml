@@ -32,7 +32,7 @@
           - if @organization.oauth_uid
             = link_to "Disconnect", signout_omniauth_path(organization_id: @organization.id), class: "btn btn-warning btn-lg #{is_admin ? '' : 'disabled'}"
           - else
-            = link_to "Link to Intercom", "/auth/intercom/request?org_uid=#{@organization.uid}", class: "btn btn-warning btn-lg" if is_admin
+            = link_to "Link to Intercom", "/auth/intercom?org_uid=#{@organization.uid}", class: "btn btn-warning btn-lg" if is_admin
 
       .spacer1
 
